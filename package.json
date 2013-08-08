@@ -1,16 +1,25 @@
 {
+	/* basic app info stuff */
 	"name": "Scoutify client",
 	"description": "A client which generates JSON files for the scoutify-hub application to process; helps to automate the FIRST competition scouting process",
 	"version": "2013-08-dev",
-	"homepage", "https://github.com/team461WBI/scoutify-client",
-	"contributors": [
-		"Christopher Cooper",
-		"Samuel Mercier",
-		"Kristofer Rye",
-		"Bradley Thompson",
-	],
+	"homepage": "https://github.com/team461WBI/scoutify-client",
+	
+	/* stuff for reporting bugs */
 	"bugs": {
 		"url": "https://github.com/team461WBI/scoutify-client/issues",
 		"email": "website@boilerinvasion.org"
+	},
+	
+	/* node-webkit-y stuff */
+	"main": "index.html",
+	"window": {
+		"toolbar": false,
+		"width": 1024,
+		"height": 768,
+		"position": "mouse",
+		"min_width": 1024,
+		"min_height": 768,
+		"frame": true
 	}
 }
