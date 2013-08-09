@@ -21,7 +21,7 @@ function generate_json_string() {
 	fancy_object = {
 		match_number: document.getElementById("txt_match_number").value,
 		match_type: document.getElementById("sel_match_type").value,
-		alliances: [
+		alliances: {
 			red: {
 				score: document.getElementById("txt_red_score").value,
 				teams: [
@@ -38,7 +38,7 @@ function generate_json_string() {
 					{number: document.getElementById("blue_team3_number").value},
 				]
 			}
-		]
+		}
 	};
 	console.log(JSON.stringify(fancy_object));
 }
