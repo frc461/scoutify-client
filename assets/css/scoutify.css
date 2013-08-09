@@ -3,3 +3,10 @@ body {
 }
 .writefilebutton {
 }
+a.navbar-brand {
+  color: #ebe314;
+}
+.btn-primary {
+  background-color: #ebe314;
+  border-color: #dbd304;
+}
