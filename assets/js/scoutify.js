@@ -6,6 +6,7 @@ function getUserHome() {
 }
 
 function writeToFile(whereToWrite, thingToWrite) {
+  whereToWrite += '.txt';
   fs.mkdir(path.join(getUserHome(), '.scoutify'));
   fs.writeFile(path.join(getUserHome(), '.scoutify', whereToWrite), thingToWrite, function(err) {
     if(err) {
@@ -18,6 +19,6 @@ function writeToFile(whereToWrite, thingToWrite) {
 
 $(".writefilebutton").click(function() {
     var t = $('textarea').val();
-    writeToFile(t.substr(1,6) t);
+    writeToFile(t.substr(0,6), t);
 }); 
 
