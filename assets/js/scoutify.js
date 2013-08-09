@@ -18,9 +18,29 @@ function writeToFile(whereToWrite, thingToWrite) {
 }
 
 function generate_json_string() {
-	team_colors = ["red", "blue"];
-	fancy_object = {};
-	console.log("GJS called!\n");
+	fancy_object = {
+		match_number: document.getElementById("txt_match_number").value,
+		match_type: document.getElementById("sel_match_type").value,
+		alliances: [
+			red: {
+				score: document.getElementById("txt_red_score").value,
+				teams: [
+					{number: document.getElementById("red_team1_number").value},
+					{number: document.getElementById("red_team2_number").value},
+					{number: document.getElementById("red_team3_number").value},
+				]
+			},
+			blue: {
+				score: document.getElementById("txt_blue_score").value,
+				teams: [
+					{number: document.getElementById("blue_team1_number").value},
+					{number: document.getElementById("blue_team2_number").value},
+					{number: document.getElementById("blue_team3_number").value},
+				]
+			}
+		]
+	};
+	console.log(JSON.stringify(fancy_object));
 }
 
 $(".writefilebutton").click(function() {
