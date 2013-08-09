@@ -34,37 +34,54 @@
 		<div class="container">
 			<div class="starter-template">
 				<h1>Scoutify Client</h1>
-				<p class="lead">
+				<!--<p class="lead">
 					Use this document as a way to quickly start any new project.<br />
 					All you get is this text and a mostly barebones HTML document.
-				</p>
-                <div class="col-lg-3">
-                    <input class="form-control" id="page_title" name="page[title]" size="30" type="text" placeholder="Team Number">
-                </div>
-                <div class="col-lg-2">
-                    <select class="form-control">
-                        <option>R1</option>
-                        <option>R2</option>
-                        <option>R3</option>
-                        <option>B1</option>
-                        <option>B2</option>
-                        <option>B3</option>
-                    </select>
-                </div>
-                <br>
-                <br>
-                <div class="col-lg-12">
-                    <textarea class="form-control" id="page_content" name="page[content]" rows="3"></textarea>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <div class="col-lg-2">
-                    <button type="submit" class="btn btn-primary writefilebutton">Write File</button>
-                </div>
-                <br>
-                <br>
+					</p>-->
+				<table>
+					<form name="match_form">
+						<tr>
+							<td>Match #:</td>
+							<td>
+								<input type="text" name="match_number" id="txt_match_number" />
+							</td>
+						</tr>
+						<tr>
+							<td>Match Type:</td>
+							<td>
+								<select name="match_type" id="sel_match_type">
+									<option value="practice">Practice</option>
+									<option value="qualification">Qualification</option>
+									<option value="elimination">Elimination</option>
+									<option value="other">Other</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="3">Red Alliance</td>
+							<td>Team <input type="text" name="red_team1_number" id="txt_red_team1_number" style="width: 48px;">: [Property fields]</td>
+						</tr>
+							<td>Team <input type="text" name="red_team2_number" id="txt_red_team2_number" style="width: 48px;">: [Property fields]</td>
+						<tr>
+							<td>Team <input type="text" name="red_team1_number" id="txt_red_team3_number" style="width: 48px;">: [Property fields]</td>
+						</tr>
+						
+						<tr>
+							<td rowspan="3">Blue Alliance</td>
+							<td>Team <input type="text" name="blue_team1_number" id="txt_blue_team1_number" style="width: 48px;">: [Property fields]</td>
+						</tr>
+							<td>Team <input type="text" name="blue_team2_number" id="txt_blue_team2_number" style="width: 48px;">: [Property fields]</td>
+						<tr>
+							<td>Team <input type="text" name="blue_team1_number" id="txt_blue_team3_number" style="width: 48px;">: [Property fields]</td>
+						</tr>
+						
+						<tr>
+							<td colspan="2" style="text-align: center;">
+								<input class="btn btn-sm btn-danger" name="submit" type="submit" value="Submit" onclick="generate_json_string();">
+							</td>
+						</tr>
+					</form>
+				</table>
 			</div>
 		</div><!-- /.container -->
 

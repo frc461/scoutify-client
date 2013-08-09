@@ -1,0 +1,22 @@
+{
+	"match_number": 0000,
+	"match_type": "practice",
+	"alliances": [
+		"red": {
+			"score": 256,
+			"teams": [
+				{"number": "461", "penalty_points_awarded": 0000, "efficiency": 5, "reliability": 5},
+				{"number": "461", "penalty_points_awarded": 0000, "efficiency": 5, "reliability": 5},
+				{"number": "461", "penalty_points_awarded": 0000, "efficiency": 5, "reliability": 5},
+			],
+		},
+		"blue": {
+			"score": 255,
+			"teams": [
+				"4096": {"penalty_points_awarded": 0000, "efficiency": 5, "reliability": 5},
+				"2048": {"penalty_points_awarded": 0000, "efficiency": 5, "reliability": 5},
+				"1024": {"penalty_points_awarded": 0000, "efficiency": 5, "reliability": 5},
+			],
+		},
+	]
+}
