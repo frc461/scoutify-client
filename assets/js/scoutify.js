@@ -19,25 +19,37 @@ function writeToFile(whereToWrite, thingToWrite) {
 
 function generate_json_string() {
 	fancy_object = {
-		match_number: document.getElementById("txt_match_number").value,
-		match_type: document.getElementById("sel_match_type").value,
+		match_number: document.getElementById("txt_match_number") ? document.getElementById("txt_match_number").value : "",
+		match_type: document.getElementById("sel_match_type") ? document.getElementById("sel_match_type").value : "",
 		alliances: {
 			red: {
-				score: document.getElementById("txt_red_score").value,
+				score: document.getElementById("txt_red_score") ? document.getElementById("txt_red_score").value : "",
 				teams: [
-					{number: document.getElementById("red_team1_number").value},
-					{number: document.getElementById("red_team2_number").value},
-					{number: document.getElementById("red_team3_number").value},
+					{
+						number: document.getElementById("txt_red_team1_number") ? document.getElementById("txt_red_team1_number").value : ""
+					},
+					{
+						number: document.getElementById("txt_red_team2_number") ? document.getElementById("txt_red_team2_number").value : ""
+					},
+					{
+						number: document.getElementById("txt_red_team3_number") ? document.getElementById("txt_red_team3_number").value : ""
+					},
 				]
 			},
 			blue: {
-				score: document.getElementById("txt_blue_score").value,
+				score: document.getElementById("txt_blue_score") ? document.getElementById("txt_blue_score").value : "",
 				teams: [
-					{number: document.getElementById("blue_team1_number").value},
-					{number: document.getElementById("blue_team2_number").value},
-					{number: document.getElementById("blue_team3_number").value},
+					{
+						number: document.getElementById("txt_blue_team1_number") ? document.getElementById("txt_blue_team1_number").value : ""
+					},
+					{
+						number: document.getElementById("txt_blue_team2_number") ? document.getElementById("txt_blue_team2_number").value : ""
+					},
+					{
+						number: document.getElementById("txt_blue_team3_number") ? document.getElementById("txt_blue_team3_number").value : ""
+					},
 				]
-			}
+			},
 		}
 	};
 	console.log(JSON.stringify(fancy_object));
