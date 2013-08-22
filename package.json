@@ -20,7 +20,7 @@
 		"position": "mouse",
 		"min_width": 1024,
 		"min_height": 768,
-		"frame": true,
-                "toolbar":true
+		"frame": false,
+		"toolbar": true
 	}
 }
