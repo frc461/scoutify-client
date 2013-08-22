@@ -14,7 +14,6 @@
 	/* node-webkit-y stuff */
 	"main": "index.html",
 	"window": {
-		"toolbar": false,
 		"width": 1024,
 		"height": 768,
 		"position": "mouse",
