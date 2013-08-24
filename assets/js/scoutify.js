@@ -6,7 +6,7 @@ function getUserHome() {
 }
 
 function writeToFile(whereToWrite, thingToWrite) {
-	whereToWrite += '.txt';
+	whereToWrite += '.json';
 	fs.mkdir(path.join(getUserHome(), '.scoutify'));
 	fs.writeFile(path.join(getUserHome(), '.scoutify', whereToWrite), thingToWrite, function(err) {
 		if(err) {
@@ -17,14 +17,17 @@ function writeToFile(whereToWrite, thingToWrite) {
 	}); 
 }
 function generateJsonString() {
-	var dragons = $("input").map(function() {
-		return [this.id,this.val];
+	var dragons = $(".inputThings").map(function() {
+		var unicorns = [$(this).attr("id"),$(this).val()];
+		return unicorns;
+		alert(unicorns);
 	});
+	console.log(dragons);
 
 	return JSON.stringify(dragons);
-)
+}
 
 $(".writefilebutton").click(function() {
-    var t = $('textarea').val();
-    writeToFile(, generateJsonString());
+    var medusa = $("#team").val() + "." + $("#round").val();
+    writeToFile(medusa, generateJsonString());
 });
