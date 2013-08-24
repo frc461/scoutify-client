@@ -24,7 +24,7 @@ function generateJsonString() {
 	});
 	console.log(dragons);
 
-	return JSON.stringify(dragons);
+	return JSON.stringify(dragons, null, 4);
 }
 
 $(".writefilebutton").click(function() {
