@@ -15,6 +15,7 @@ function stringyJson(dragons) {
 		}
 	}
 	orc += "\n}\n";
+	return orc;
 }
 
 function writeToFile(whereToWrite, thingToWrite) {
