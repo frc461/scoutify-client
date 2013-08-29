@@ -2,7 +2,8 @@ var fs = require('fs');
 var path = require('path');
 
 function getUserHome() {
-	return process.env.HOME /*|| process.env.USERPROFILE*/;
+	return process.env.HOME || process.env.USERPROFILE;
+	
 }
 
 function writeToFile(whereToWrite, thingToWrite) {
@@ -20,11 +21,10 @@ function generateJsonString() {
 	var dragons = $(".inputThings").map(function() {
 		var unicorns = [$(this).attr("id"),$(this).val()];
 		return unicorns;
-		alert(unicorns);
 	});
-	console.log(dragons);
+	console.log(jQuery.makeArray(dragons));
 
-	return JSON.stringify(dragons, null, 4);
+	return JSON.stringify(jQuery.makeArray(dragons));
 }
 
 $(".writefilebutton").click(function() {
