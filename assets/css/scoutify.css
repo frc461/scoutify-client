@@ -10,3 +10,7 @@ a.navbar-brand {
   background-color: #ebe314;
   border-color: #dbd304;
 }
+.btn-primary:hover, .btn-primary:focus, .btn-primary.active {
+	background-color: #dbd304;
+	border-color #bbb304;
+}
