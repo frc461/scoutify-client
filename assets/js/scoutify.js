@@ -18,9 +18,10 @@ function stringyJson(dragons) {
 	return orc;
 }
 
-function writeToFile(whereToWrite, thingToWrite) {
+function writeToFile(teamNumber, whereToWrite, thingToWrite) {
 	whereToWrite += '.json';
 	fs.mkdir(path.join(getUserHome(), '.scoutify'));
+	fs.mkdir(path.join(getUserHome(), '.scoutify', teamNumber));
 	fs.writeFile(path.join(getUserHome(), '.scoutify', whereToWrite), thingToWrite, function(err) {
 		if(err) {
 			console.log(err);
@@ -41,5 +42,5 @@ function generateJsonString() {
 
 $(".writefilebutton").click(function() {
     var medusa = $("#team").val() + "." + $("#round").val();
-    writeToFile(medusa, generateJsonString());
+    writeToFile($("#team").val(), medusa, generateJsonString());
 });
