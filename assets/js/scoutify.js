@@ -22,7 +22,7 @@ function writeToFile(teamNumber, whereToWrite, thingToWrite) {
 	whereToWrite += '.json';
 	fs.mkdir(path.join(getUserHome(), '.scoutify'));
 	fs.mkdir(path.join(getUserHome(), '.scoutify', teamNumber));
-	fs.writeFile(path.join(getUserHome(), '.scoutify', whereToWrite), thingToWrite, function(err) {
+	fs.writeFile(path.join(getUserHome(), '.scoutify', teamNumber, whereToWrite), thingToWrite, function(err) {
 		if(err) {
 			console.log(err);
 		} else {
