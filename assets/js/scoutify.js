@@ -26,13 +26,15 @@ function writeToFile(teamNumber, whereToWrite, thingToWrite) {
 		if(err) {
 			console.log(err);
 		} else {
-			console.log("The file was saved!");
+			alert("The file was saved!");
+			Window.reload();
+			
 		}
 	}); 
 }
 function generateJsonString() {
 	var dragons = $(".inputThings").map(function() {
-		var unicorns = [$(this).attr("id"),"\"\"" + $(this).val() + "\"\""];
+		var unicorns = [$(this).attr("id"),"\"" + $(this).val() + "\""];
 		return unicorns;
 	});
 	console.log(jQuery.makeArray(dragons));
