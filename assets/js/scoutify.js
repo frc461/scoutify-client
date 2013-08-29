@@ -3,7 +3,18 @@ var path = require('path');
 
 function getUserHome() {
 	return process.env.HOME || process.env.USERPROFILE;
-	
+}
+
+function stringyJson(dragons) {
+	var orc = "{\n"
+	for (x = 0; x < dragons.length / 2; x++ ) {
+		orc += dragons[(x * 2) ] + ":";
+		orc += dragons[(x * 2) + 1];
+		if ( (x*2) + 2 != dragons.length / 2) {
+			orc += ",\n";
+		}
+	}
+	orc += "\n}\n";
 }
 
 function writeToFile(whereToWrite, thingToWrite) {
@@ -24,7 +35,7 @@ function generateJsonString() {
 	});
 	console.log(jQuery.makeArray(dragons));
 
-	return JSON.stringify(jQuery.makeArray(dragons));
+	return stringyJson(jQuery.makeArray(dragons));
 }
 
 $(".writefilebutton").click(function() {
