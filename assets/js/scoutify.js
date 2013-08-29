@@ -29,7 +29,7 @@ function writeToFile(teamNumber, whereToWrite, thingToWrite) {
 			console.log(err);
 		} else {
 			alert("The file was saved!");
-			Win.reload();
+			win.reload();
 			
 		}
 	}); 
