@@ -7,10 +7,10 @@ a.navbar-brand {
   color: #ebe314;
 }
 .btn-primary {
-  background-color: #ebe314;
+  background-color: #fbf314;
   border-color: #dbd304;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary.active {
-	background-color: #dbd304;
-	border-color #bbb304;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+	background-color: #fbf364;
+	border-color: #dbd334;
 }
