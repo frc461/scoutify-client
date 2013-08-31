@@ -36,7 +36,8 @@ function writeToFile(teamNumber, whereToWrite, thingToWrite) {
 }
 function generateJsonString() {
 	var dragons = $(".inputThings").map(function() {
-		var unicorns = ["\"" + $(this).attr("id") + "\"", "\"" + $(this).val() + "\""];
+		var unicorns = ["\"" + $(this).attr("id") + "\"",
+						"\"" + $(this).val().replace(/\n/g, "\\n") + "\""];
 		return unicorns;
 	});
 	console.log(jQuery.makeArray(dragons));
