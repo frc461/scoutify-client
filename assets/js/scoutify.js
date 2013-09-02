@@ -46,6 +46,6 @@ function generateJsonString() {
 }
 
 $(".writefilebutton").click(function() {
-    var medusa = $("#team").val() + "." + $("#round").val();
-    writeToFile($("#team").val(), medusa, generateJsonString());
+	var medusa = $("#team").val() + "." + $("#round").val();
+	writeToFile($("#team").val(), medusa, generateJsonString());
 });
