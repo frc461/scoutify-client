@@ -40,7 +40,7 @@ function generateJsonString() {
 						
 						($(this).hasClass("outputAsString") ? "\"" : "") +
 						$(this).val().replace(/\n/g, "\\n") +
-					    ($(this).hasClass("outputAsString") ? "\"" : "")];
+						($(this).hasClass("outputAsString") ? "\"" : "")];
 		
 		return unicorns;
 	});
