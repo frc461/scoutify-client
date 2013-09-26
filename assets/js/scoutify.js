@@ -41,6 +41,7 @@ function generateJsonString() {
 						($(this).hasClass("outputAsString") ? "\"" : "") +
 						$(this).val().replace(/\n/g, "\\n") +
 					    ($(this).hasClass("outputAsString") ? "\"" : "")];
+		
 		return unicorns;
 	});
 	console.log(jQuery.makeArray(dragons));
