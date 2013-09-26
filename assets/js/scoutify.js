@@ -36,11 +36,19 @@ function writeToFile(teamNumber, whereToWrite, thingToWrite) {
 }
 function generateJsonString() {
 	var dragons = $(".inputThings").map(function() {
+		var valwrap = "";
+
+		if($(this).hasClass("outputAsNumber")) {
+			valwrap = "";
+		} else {
+			valwrap = "\"";
+		}
+		
 		var unicorns = ["\"" + $(this).attr("id") + "\"",
 						
-						($(this).hasClass("outputAsString") ? "\"" : "") +
+						valwrap +
 						$(this).val().replace(/\n/g, "\\n") +
-						($(this).hasClass("outputAsString") ? "\"" : "")];
+						valwrap];
 		
 		return unicorns;
 	});
