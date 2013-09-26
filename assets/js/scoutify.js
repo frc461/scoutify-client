@@ -9,8 +9,8 @@ function getUserHome() {
 
 function stringyJson(dragons) {
 	var orc = "{\n"
-	for (x = 0; x < dragons.length / 2; x++ ) {
-		orc += dragons[(x * 2) ] + ":";
+	for(x = 0; x < dragons.length / 2; x++) {
+		orc += dragons[(x * 2)] + ":";
 		orc += dragons[(x * 2) + 1];
 		if ((x*2) + 2 != dragons.length) {
 			orc += ",\n";
