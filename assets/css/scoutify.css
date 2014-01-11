@@ -124,6 +124,7 @@ th {
 
 td {
     color: #ffffff;
+	border-top: none !important;
 }
 
 h1 {
@@ -135,9 +136,17 @@ h1 {
     line-height: normal;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
+	border-top: none;
+	border-bottom: none;
+}
+
+tr {
+	border-top: thin solid #666;
+	border-bottom: thin solid #666;
 }
 
 hr {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	border-color: #666;
 }
