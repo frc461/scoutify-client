@@ -150,3 +150,7 @@ hr {
 	margin-bottom: 5px;
 	border-color: #666;
 }
+
+.writefilebutton {
+	font-size: 150%;
+}
