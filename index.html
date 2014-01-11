@@ -106,13 +106,13 @@
 							High Goal
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="high_goals_scored" type="text" onchange="changeCounter('left')" value="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="high_goals_scored" type="text" onchange="changeCounter('left', 'high_goals_scored', 'high_goals_attempted')" value="0">
 						</td>
 						<td>
 							out of
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="high_goals_attempted" type="text" value="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="high_goals_attempted" type="text" onchange="changeCounter('right', 'high_goals_scored', 'high_goals_attempted')" value="0">
 						</td>
 					</tr>
 					<tr>

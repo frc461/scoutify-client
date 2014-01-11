@@ -68,12 +68,19 @@ function generateJsonString() {
 	return stringyJson(jQuery.makeArray(dragons));
 }
 
-function changeCounter(side) {
+/* Smartly changes the counters to reduce work by the user. */
+function changeCounter(side, leftID, rightID) {
+	var left = $("#" + leftID)[0];
+	var right = $("#" + rightID)[0];
+	
 	/* LEFT out of RIGHT */
 	if (side == "left") {
-		
+		/* .value is a string, so we need to convert it to an integer for comparison to work. */
+		if (parseInt(left.value) > parseInt(right.value))
+			right.value = left.value;
 	} else if (side == "right") {
-		
+		if (parseInt(right.value) < parseInt(left.value))
+			left.value = right.value;
 	}
 }
 
