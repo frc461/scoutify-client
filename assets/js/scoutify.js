@@ -68,12 +68,13 @@ function generateJsonString() {
 	return stringyJson(jQuery.makeArray(dragons));
 }
 
-function changeLeftCounter() {
-	
-}
-
-function changeRightCounter() {
-	
+function changeCounter(side) {
+	/* LEFT out of RIGHT */
+	if (side == "left") {
+		
+	} else if (side == "right") {
+		
+	}
 }
 
 $(".writefilebutton").click(function() {
