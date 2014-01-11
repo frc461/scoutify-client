@@ -120,13 +120,13 @@
 							Low Goal
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="low_goals_scored" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="low_goals_scored" type="text" onchange="changeCounter('left', 'low_goals_scored', 'low_goals_attempted')" value="0" min="0">
 						</td>
 						<td>
 							out of
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="low_goals_attempted" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="low_goals_attempted" type="text" onchange="changeCounter('right', 'low_goals_scored', 'low_goals_attempted')" value="0" min="0">
 						</td>
 					</tr>
 					<tr>
@@ -134,13 +134,13 @@
 							Truss
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="trusses_scored" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="trusses_scored" type="text" onchange="changeCounter('left', 'trusses_scored', 'trusses_attempted')" value="0" min="0">
 						</td>
 						<td>
 							out of
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="trusses_attempted" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="trusses_attempted" type="text" onchange="changeCounter('right', 'trusses_scored', 'trusses_attempted')" value="0" min="0">
 						</td>
 					</tr>
 					<tr>
@@ -148,13 +148,13 @@
 							Catch From Truss
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="catches_scored" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="catches_scored" type="text" onchange="changeCounter('left', 'catches_scored', 'catches_attempted')" value="0" min="0">
 						</td>
 						<td>
 							out of
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="catches_attempted" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="catches_attempted" type="text" onchange="changeCounter('right', 'catches_scored', 'catches_attempted')" value="0" min="0">
 						</td>
 					</tr>
 					<tr>
@@ -162,27 +162,27 @@
 							Pass
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="passes_scored" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="passes_scored" type="text" onchange="changeCounter('left', 'passes_scored', 'passes_attempted')" value="0" min="0">
 						</td>
 						<td>
 							out of
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="passes_attempted" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="passes_attempted" type="text" onchange="changeCounter('right', 'passes_scored', 'passes_attempted')" value="0" min="0">
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Recieve
+							Receive
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="recieves_scored" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="receives_scored" type="text" onchange="changeCounter('left', 'receives_scored', 'receives_attempted')" value="0" min="0">
 						</td>
 						<td>
 							out of
 						</td>
 						<td>
-							<input class="form-control inputThings outputAsNumber" type="number" id="recieves_attempted" type="text" value="0" min="0">
+							<input class="form-control inputThings outputAsNumber" type="number" id="receives_attempted" type="text" onchange="changeCounter('right', 'receives_scored', 'receives_attempted')" value="0" min="0">
 						</td>
 					</tr>
 				</tbody>
