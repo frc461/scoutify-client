@@ -68,6 +68,14 @@ function generateJsonString() {
 	return stringyJson(jQuery.makeArray(dragons));
 }
 
+function changeLeftCounter() {
+	
+}
+
+function changeRightCounter() {
+	
+}
+
 $(".writefilebutton").click(function() {
 	var medusa = $("#team").val() + "." + $("#round").val();
 	
