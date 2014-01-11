@@ -18,6 +18,7 @@ a.navbar-brand:hover {
 	text-align: center;
 	padding: 25px;
 	border: 2px dashed grey;
+	
 	-webkit-transition: all 500ms linear;
 }
 
@@ -27,8 +28,6 @@ a.navbar-brand:hover {
 }
 
 .drag-n-drop:hover {
-	/*  color: #2DD700;
-		border-color: #2DD700;*/
 	color: #fff200;
 	border-color: #fff200;
 }
@@ -43,30 +42,32 @@ a.navbar-brand:hover {
 
 ::-webkit-scrollbar-thumb {
     background-color: #fff200;
+	
     -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.5); 
 }
 
 .credits {
 	font-size: 20px;
 	color: grey;
-	text-align:center;
+	text-align: center;
 }
 
 .credits > a {
-	color:grey;
+	color: grey;
+	
 	-webkit-transition: all 500ms linear;
 }
 
 .credits > a:hover {
-	color:#fff200;
+	color: #fff200;
 }
 
 .sam {
 	color: grey;
-	text-align:center;  
+	text-align: center;  
 }
 
-/*from client*/
+/* from client */
 .btn-primary {
 	background-color: #fbf314;
 	border-color: #dbd304;
@@ -85,15 +86,16 @@ a.navbar-brand:hover {
 }
 
 .form-control {
-	background-color:#333;
+	background-color: #333;
 	color: #fff;
 }
 
 .form-control:focus, .form-control:hover {
 	border-color: #fff200;
 	outline: 0;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 242, 0, 0.6);
+	
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 242, 0, 0.6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 242, 0, 0.6);
 }
 
 .panel {
@@ -109,9 +111,10 @@ a.navbar-brand:hover {
 }
 
 .panel-default {
-	-webkit-box-shadow: 0 1px 1px rgba(68, 68, 68, 0.05);
 	box-shadow: 0 1px 1px rgba(68, 68, 68, 0.05);
 	border-color: #444;
+	
+	-webkit-box-shadow: 0 1px 1px rgba(68, 68, 68, 0.05);
 }
 
 a.accordion-toggle {
