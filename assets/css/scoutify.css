@@ -80,10 +80,7 @@ a.navbar-brand:hover {
 	color: #333;
 }
 
-.inputThings {
-	margin-top: 4px;
-	margin-bottom: 4opx;
-}
+.inputThings {}
 
 .form-control {
 	background-color: #333;
