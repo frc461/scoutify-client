@@ -68,6 +68,14 @@ function generateJsonString() {
 	return stringyJson(jQuery.makeArray(dragons));
 }
 
+// initialize vars for left side spinners
+var leftspins = {};
+$(function() {
+	$(".leftspin").map(function() {
+		leftspins[$(this).attr('id')] = parseInt($(this).val());
+	});
+});
+
 /* Smartly changes the counters to reduce work by the user. */
 function changeCounter(side, leftID, rightID) {
 	var left = $("#" + leftID)[0];
@@ -76,11 +84,15 @@ function changeCounter(side, leftID, rightID) {
 	/* LEFT out of RIGHT */
 	if (side == "left") {
 		/* .value is a string, so we need to convert it to an integer for comparison to work. */
-		if (parseInt(left.value) > parseInt(right.value))
-			right.value = left.value;
+		if (parseInt(left.value) != leftspins[leftID]) {
+			diff = parseInt(left.value) - leftspins[leftID];
+			right.value = diff + parseInt(right.value);
+			leftspins[leftID] += diff;
+		}
 	} else if (side == "right") {
-		if (parseInt(right.value) < parseInt(left.value))
-			left.value = right.value;
+		if (parseInt(right.value) < parseInt(left.value)) {
+			leftspins[leftID] = left.value = right.value;
+		}
 	}
 }
 
