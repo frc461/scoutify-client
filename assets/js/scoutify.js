@@ -86,7 +86,9 @@ function changeCounter(side, leftID, rightID) {
 		/* .value is a string, so we need to convert it to an integer for comparison to work. */
 		if (parseInt(left.value) != leftspins[leftID]) {
 			diff = parseInt(left.value) - leftspins[leftID];
+			
 			right.value = diff + parseInt(right.value);
+			
 			leftspins[leftID] += diff;
 		}
 	} else if (side == "right") {
