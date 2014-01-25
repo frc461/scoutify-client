@@ -101,3 +101,7 @@ $(".writefilebutton").click(function() {
 	
 	writeToFile($("#team").val(), medusa, generateJsonString());
 });
+
+$(function() {
+	$("#notes").height($("#tablething").height() - 14);
+});
