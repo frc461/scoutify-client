@@ -17,9 +17,9 @@
 		"width": 1024,
 		"height": 768,
 		"position": "mouse",
-		"min_width": 1024,
-		"min_height": 768,
-		"frame": false,
+		"min_width": 512,
+		"min_height": 512,
+		"frame": true,
 		"toolbar": true
 	}
 }
