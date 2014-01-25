@@ -1,4 +1,3 @@
-/* Load Node Webkit components. */
 var gui = require('nw.gui');
 var win = gui.Window.get();
 
@@ -86,14 +85,17 @@ function changeCounter(side, leftID, rightID) {
 		/* .value is a string, so we need to convert it to an integer for comparison to work. */
 		if (parseInt(left.value) != leftspins[leftID]) {
 			diff = parseInt(left.value) - leftspins[leftID];
-			
-			right.value = diff + parseInt(right.value);
+
+			if (diff > 0) {
+				right.value = diff + parseInt(right.value);
+			}
 			
 			leftspins[leftID] += diff;
 		}
 	} else if (side == "right") {
 		if (parseInt(right.value) < parseInt(left.value)) {
-			leftspins[leftID] = left.value = right.value;
+			left.value = right.value;
+			leftspins[leftID] = parseInt(left.value);
 		}
 	}
 }
