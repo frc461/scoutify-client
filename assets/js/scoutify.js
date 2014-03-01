@@ -29,8 +29,13 @@ function stringyJson(dragons) {
 function writeToFile(teamNumber, whereToWrite, thingToWrite) {
 	whereToWrite += '.json';
 	
+	if(!fs.existsSync(path.join(getUserHome(), '.scoutify'))){
 	fs.mkdir(path.join(getUserHome(), '.scoutify'));
+	}
+
+	if(!fs.existsSync(path.join(getUserHome(), '.scoutify', teamNumber))){
 	fs.mkdir(path.join(getUserHome(), '.scoutify', teamNumber));
+	}
 	
 	fs.writeFile(path.join(getUserHome(), '.scoutify', teamNumber, whereToWrite), thingToWrite, function(err) {
 		if (err) {
