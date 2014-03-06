@@ -86,10 +86,8 @@ function changeCounter(side, leftID, rightID) {
 		if (parseInt(left.value) != leftspins[leftID]) {
 			diff = parseInt(left.value) - leftspins[leftID];
 
-			if (diff > 0) {
-				right.value = diff + parseInt(right.value);
-			}
-			
+			right.value = diff + parseInt(right.value);
+
 			leftspins[leftID] += diff;
 		}
 	} else if (side == "right") {
