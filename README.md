@@ -6,4 +6,20 @@ Scoutify: The Client component. This is mean to be a "webish" interface generati
 Installation
 ------------
 
-Clone, cd to directory, install node webkit and relevant parts, and then run `nw ../scoutify-client/`.
+Clone, cd to directory, install node webkit and relevant parts, and then run `nw .` from the root directory of this repo.
+
+ALTERNATIVELY you can in some GUI's drag and drop the scoutify-client folder on the executable.
+
+Creating A Preset Competition File
+----------------------------------
+
+###Linux
+Make sure setEvent.sh is exutable.
+`./setEvent.sh REGIONALNAME`
+This will create an html file with the default value of the event field being REGIONALNAME.
+Then you can press the "Use Preset Competition Value" on the navbar each time you start a new instance of scoutify-client.
+ALTERNATIVELY you can change the package.json file `"main": "index.html",` to `"main": "presetIndex.html"`.
+
+###Windows/Mac
+Copy index.html to presetIndex.html and replace defaultEvent with the name of your regional.
+The same principals from the linux bits apply.
