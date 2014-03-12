@@ -46,8 +46,12 @@ function writeToFile(teamNumber, whereToWrite, thingToWrite, eventThing) {
 			console.log(err);
 		} else {
 			alert("The file was saved!");
-
-			win.reload();
+			if(getUrlVars()["position"] == undefined) {
+				window.location = document.URL +"?position=" + $("#position").val();
+			}
+			else {
+				win.reload();
+			}
 		}
 	});
 }
@@ -117,3 +121,16 @@ $(".writefilebutton").click(function() {
 $(function() {
 	$("#notes").height($("#tablething").height() - 14);
 });
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+											 function(m,key,value) {
+												 vars[key] = value;
+											 });
+    return vars;
+}
+
+if (getUrlVars()["position"]) {
+	$("#position").val(getUrlVars()["position"]);
+};
